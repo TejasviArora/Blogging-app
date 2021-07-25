@@ -11,28 +11,26 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kBackgroundColor,
+      backgroundColor: Color(0xff3A9A66),
       body: SafeArea(
         child: Column(
-          mainAxisSize: MainAxisSize.max,
+          //mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Align(
-              alignment: Alignment(-0.1, -0.55),
-              child: Padding(
-                padding: EdgeInsets.fromLTRB(10, 10, 10, 40),
-                child: Center(
-                  child: Text(
-                    'Welcome to ',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 35,
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            // Padding(
+            //   padding: EdgeInsets.fromLTRB(10, 10, 10, 40),
+            //   child: Center(
+            //     child: Text(
+            //       'Welcome to ',
+            //       style: TextStyle(
+            //         color: Color(0xff3A9A66),
+            //         fontSize: 35,
+            //         fontWeight: FontWeight.bold,
+            //       ),
+            //     ),
+            //   ),
+            // ),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context)
@@ -48,16 +46,16 @@ class _WelcomePageState extends State<WelcomePage> {
                 child: Image.asset("assets/images/blogicon.jpeg"),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
-              child: Text(
-                'tap .blog to continue!',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 15,
-                ),
-              ),
-            ),
+            // Padding(
+            //   padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+            //   child: Text(
+            //     'tap .blog to continue!',
+            //     style: TextStyle(
+            //       color: Colors.black,
+            //       fontSize: 15,
+            //     ),
+            //   ),
+            // ),
           ],
         ),
       ),
@@ -65,46 +63,46 @@ class _WelcomePageState extends State<WelcomePage> {
   }
 }
 
-class MyInterestContainer extends StatelessWidget {
-  final String interest;
-  const MyInterestContainer({
-    required this.interest,
-  });
+// class MyInterestContainer extends StatelessWidget {
+//   final String interest;
+//   const MyInterestContainer({
+//     required this.interest,
+//   });
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 30,
-      width: 100,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
-        color: Color(0xFF292929),
-        boxShadow: [
-          BoxShadow(
-            offset: Offset(
-              5.0,
-              5.0,
-            ),
-            blurRadius: 5.0,
-            spreadRadius: 2.0,
-          ), //BoxShadow
-          BoxShadow(
-            color: Colors.black,
-            offset: const Offset(0.0, 0.0),
-            blurRadius: 0.0,
-            spreadRadius: 0.0,
-          ),
-        ],
-      ),
-      child: Center(
-          child: Text(interest,
-              style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w600))), //BoxShadow
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       height: 30,
+//       width: 100,
+//       decoration: BoxDecoration(
+//         borderRadius: BorderRadius.circular(10),
+//         color: Color(0xFF292929),
+//         boxShadow: [
+//           BoxShadow(
+//             offset: Offset(
+//               5.0,
+//               5.0,
+//             ),
+//             blurRadius: 5.0,
+//             spreadRadius: 2.0,
+//           ), //BoxShadow
+//           BoxShadow(
+//             color: Colors.black,
+//             offset: const Offset(0.0, 0.0),
+//             blurRadius: 0.0,
+//             spreadRadius: 0.0,
+//           ),
+//         ],
+//       ),
+//       child: Center(
+//           child: Text(interest,
+//               style: TextStyle(
+//                   fontSize: 16,
+//                   color: Colors.white,
+//                   fontWeight: FontWeight.w600))), //BoxShadow
+//     );
+//   }
+// }
 
 
   //now.year, now.month, now.day, 

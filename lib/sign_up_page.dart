@@ -14,57 +14,26 @@ class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // resizeToAvoidBottomInset: false,
-      backgroundColor: kBackgroundColor,
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         physics: NeverScrollableScrollPhysics(),
         child: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(25, 50, 25, 0),
+            padding: const EdgeInsets.fromLTRB(25, 25, 25, 0),
             child: Column(
-              //crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Row(
-                  children: [
-                    Container(
-                      width: 55,
-                      height: 55,
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                        // child: Icon(
-                        //   Icons.shopping_bag,
-                        //   color: Colors.white,
-                        // ),
-                      ),
-                      decoration: BoxDecoration(
-                          color: Color(0xFF101010),
-                          borderRadius: BorderRadius.all(Radius.circular(20)),
-                          border: Border.all(
-                            color: Colors.white30,
-                            width: 1,
-                          )),
+                Image.asset("assets/images/horse.png"),
+                Padding(
+                  padding: const EdgeInsets.only(top: 35.0, bottom: 20),
+                  child: Text(
+                    "CREATE ACCOUNT",
+                    style: TextStyle(
+                      fontSize: 35,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xff3A9A66), //Color(0xFF03045E),
                     ),
-                    SizedBox(width: 25),
-                    Text("Sign Up",
-                        style: TextStyle(
-                          fontSize: 45,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                        ))
-                  ],
-                ),
-                SizedBox(height: 100),
-                Text(
-                  "Sign up with the following options",
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.white24,
                   ),
                 ),
-                SizedBox(height: 0),
-                SizedBox(height: 40),
                 TextInputs(
                   data: "User Name",
                   inputType: TextInputType.text,
@@ -112,20 +81,19 @@ class SignUpPage extends StatelessWidget {
                     },
                     child: Center(
                         child: Text(
-                      "Sign Up",
+                      "SIGN UP",
                       style: TextStyle(
-                        fontSize: 25,
+                        fontSize: 30,
                         color: Colors.white,
-                        fontWeight: FontWeight.w300,
+                        fontWeight: FontWeight.w400,
                       ),
                     )),
                   ),
                   width: 350,
                   height: 60,
                   decoration: BoxDecoration(
-                    color: Color(0xFFFC9483),
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
-                  ),
+                      color: Color(0xff3A9A66),
+                      borderRadius: BorderRadius.all(Radius.circular(20))),
                 ),
                 SizedBox(height: 20),
                 Row(
@@ -134,7 +102,7 @@ class SignUpPage extends StatelessWidget {
                     Text(
                       "Already have a acount? ",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color(0xff3A9A66),
                         fontSize: 18,
                       ),
                     ),
@@ -149,7 +117,7 @@ class SignUpPage extends StatelessWidget {
                         child: Text(
                           "Log in",
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Color(0xff3A9A66),
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                             decoration: TextDecoration.underline,

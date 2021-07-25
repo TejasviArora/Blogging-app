@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Product Sans',
         primarySwatch: Colors.blue,
       ),
-      home: UserProfile(),
+      home: WelcomePage(),
     );
   }
 }

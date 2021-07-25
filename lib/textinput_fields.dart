@@ -18,27 +18,31 @@ class TextInputs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      controller: customController,
-      obscureText: obscureText,
-      keyboardType: inputType,
-      style: TextStyle(color: Colors.white, fontSize: 25),
-      cursorColor: Colors.white,
-      decoration: InputDecoration(
-        enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.black, width: 2.0),
-          borderRadius: BorderRadius.all(Radius.circular(20.0)),
-        ),
-        border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(20))),
-        labelText: data,
-        labelStyle: TextStyle(
-          fontSize: 25,
-          color: Colors.white,
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.black, width: 2.0),
-          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+    return Container(
+      width: 400,
+      height: 60,
+      child: TextField(
+        controller: customController,
+        obscureText: obscureText,
+        keyboardType: inputType,
+        style: TextStyle(color: Colors.white, fontSize: 25),
+        cursorColor: Colors.white,
+        decoration: InputDecoration(
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Color(0xff3A9A66), width: 2.0),
+            borderRadius: BorderRadius.all(Radius.circular(20.0)),
+          ),
+          border: OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(20))),
+          labelText: data,
+          labelStyle: TextStyle(
+            fontSize: 25,
+            color: Color(0xff3A9A66),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Color(0xff3A9A66), width: 2.0),
+            borderRadius: BorderRadius.all(Radius.circular(20.0)),
+          ),
         ),
       ),
     );

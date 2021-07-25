@@ -7,6 +7,7 @@ class BlogScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff45b679),
       // appBar: AppBar(
       //   backgroundColor: Colors.transparent,
       //   elevation: 0,
@@ -34,9 +35,8 @@ class BlogScreen extends StatelessWidget {
                   children: [
                     Text(
                       "Latest Article ⚡️",
-                      style: TextStyle(
-                        fontSize: 30,
-                      ),
+                      style:
+                          TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
                     ),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(100, 0, 0, 0),
@@ -45,7 +45,12 @@ class BlogScreen extends StatelessWidget {
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) => UserProfile()));
                           },
-                          child: Text("🧙🏻", style: TextStyle(fontSize: 25))),
+                          child: Icon(Icons.account_box_rounded, size: 35)
+                          // Text(
+                          //   "🧙🏻",
+                          //   style: TextStyle(fontSize: 25),
+                          // ),
+                          ),
                       //Icon(Icons.clear_all),
                     ),
                   ],
