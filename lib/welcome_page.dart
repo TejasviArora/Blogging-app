@@ -22,11 +22,13 @@ class _WelcomePageState extends State<WelcomePage> {
               alignment: Alignment(-0.1, -0.55),
               child: Padding(
                 padding: EdgeInsets.fromLTRB(10, 10, 10, 40),
-                child: Text(
-                  'Welcome to',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 35,
+                child: Center(
+                  child: Text(
+                    'Welcome to ',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 35,
+                    ),
                   ),
                 ),
               ),
@@ -38,7 +40,7 @@ class _WelcomePageState extends State<WelcomePage> {
               },
               child: Container(
                 decoration: BoxDecoration(
-                  color: Colors.blue,
+                  color: Colors.transparent,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 width: 200,

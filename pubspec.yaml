@@ -52,6 +52,9 @@ flutter:
     - assets/images/desert.jpg
     - assets/images/avatar.png
     - assets/images/avatarBGremoved.png
+    - assets/images/maleAvatar.png
+    - assets/images/squareAvatar.png
+  
 
     # - images/a_dot_ham.jpeg
 

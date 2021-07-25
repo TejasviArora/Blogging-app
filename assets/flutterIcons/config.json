@@ -1,0 +1,70 @@
+{
+  "name": "",
+  "css_prefix_text": "",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "471497b78b90ca63aa21b13bf4c46cf4",
+      "css": "female",
+      "code": 59393,
+      "src": "elusive"
+    },
+    {
+      "uid": "22a893e7725504a4a3b8905fb20cac53",
+      "css": "account_circle",
+      "code": 59392,
+      "src": "material"
+    },
+    {
+      "uid": "5a2e0f80f343a57e27915d85fefa82c6",
+      "css": "keyboard_arrow_right",
+      "code": 59418,
+      "src": "material"
+    },
+    {
+      "uid": "06ccc9733fe579f3f55271f69a54223b",
+      "css": "person_outline",
+      "code": 59394,
+      "src": "material"
+    },
+    {
+      "uid": "bc64550dd022ce21604f97309b346cea",
+      "css": "cog",
+      "code": 59395,
+      "src": "entypo"
+    },
+    {
+      "uid": "d73eceadda1f594cec0536087539afbf",
+      "css": "heart",
+      "code": 59396,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "7d85bab52016c1a1834e13bfeee98b1c",
+      "css": "chevron_right",
+      "code": 59397,
+      "src": "material"
+    },
+    {
+      "uid": "5387667811a68af841f122838f9df499",
+      "css": "featured_play_list",
+      "code": 59398,
+      "src": "material"
+    },
+    {
+      "uid": "7f85dc488759130cd55bf15671f5920f",
+      "css": "widgets",
+      "code": 59399,
+      "src": "material"
+    },
+    {
+      "uid": "4030ba7762283cc2edebc1578ab2fdf2",
+      "css": "people_outline",
+      "code": 59400,
+      "src": "material"
+    }
+  ]
+}

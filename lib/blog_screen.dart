@@ -7,49 +7,72 @@ class BlogScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // appBar: AppBar(
+      //   backgroundColor: Colors.transparent,
+      //   elevation: 0,
+      //   title: Text("LATEST BLOG ⚡️",
+      //       style: TextStyle(color: Colors.black, fontSize: 25)),
+      //   actions: [
+      //     InkWell(
+      //         onTap: () {
+      //           Navigator.of(context).push(
+      //               MaterialPageRoute(builder: (context) => UserProfile()));
+      //         },
+      //         child: Text("🧙🏻", style: TextStyle(fontSize: 25))),
+      //   ],
+      // ),
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(15, 20, 15, 10),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 10, 0, 7),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Latest Article ⚡️",
-                    style: TextStyle(
-                      fontSize: 30,
+        padding: const EdgeInsets.fromLTRB(10, 30, 10, 10),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 10, 0, 7),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Latest Article ⚡️",
+                      style: TextStyle(
+                        fontSize: 30,
+                      ),
                     ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(100, 0, 0, 0),
+                      child: InkWell(
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => UserProfile()));
+                          },
+                          child: Text("🧙🏻", style: TextStyle(fontSize: 25))),
+                      //Icon(Icons.clear_all),
+                    ),
+                  ],
+                ),
+              ),
+              Column(
+                children: [
+                  BlogCard(
+                      title:
+                          'Why should you visit Moroccon desert this summers?',
+                      posterImage: 'assets/images/moutains.jpg'),
+                  SizedBox(
+                    height: 12,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(100, 0, 0, 0),
-                    child: InkWell(
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => UserProfile()));
-                        },
-                        child: Text("🧙🏻", style: TextStyle(fontSize: 25))),
-                    //Icon(Icons.clear_all),
+                  BlogCard(
+                      title: "Why should you never go there in Monsoons!",
+                      posterImage: "assets/images/sea.jpg"),
+                  SizedBox(
+                    height: 12,
                   ),
+                  BlogCard(
+                      title: "Why should you never go there in Monsoons!",
+                      posterImage: "assets/images/desert.jpg"),
                 ],
               ),
-            ),
-            Column(
-              children: [
-                BlogCard(
-                    title: 'Why should you visit Moroccon desert this summers?',
-                    posterImage: 'assets/images/moutains.jpg'),
-                SizedBox(
-                  height: 12,
-                ),
-                BlogCard(
-                    title: "Why should you never go there in Monsoons!",
-                    posterImage: "assets/images/sea.jpg")
-              ],
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

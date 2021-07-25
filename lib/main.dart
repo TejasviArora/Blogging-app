@@ -1,3 +1,4 @@
+import 'package:blogging_app/user_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:blogging_app/welcome_page.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Product Sans',
         primarySwatch: Colors.blue,
       ),
-      home: WelcomePage(),
+      home: UserProfile(),
     );
   }
 }
