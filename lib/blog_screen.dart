@@ -7,7 +7,7 @@ class BlogScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff45b679),
+      backgroundColor: Color(0xffa5ddbe),
       // appBar: AppBar(
       //   backgroundColor: Colors.transparent,
       //   elevation: 0,
@@ -15,11 +15,12 @@ class BlogScreen extends StatelessWidget {
       //       style: TextStyle(color: Colors.black, fontSize: 25)),
       //   actions: [
       //     InkWell(
-      //         onTap: () {
-      //           Navigator.of(context).push(
-      //               MaterialPageRoute(builder: (context) => UserProfile()));
-      //         },
-      //         child: Text("🧙🏻", style: TextStyle(fontSize: 25))),
+      //       onTap: () {
+      //         Navigator.of(context)
+      //             .push(MaterialPageRoute(builder: (context) => UserProfile()));
+      //       },
+      //       child: Icon(Icons.account_box_rounded, size: 35),
+      //     ),
       //   ],
       // ),
       body: Padding(
@@ -41,16 +42,16 @@ class BlogScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.fromLTRB(100, 0, 0, 0),
                       child: InkWell(
-                          onTap: () {
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => UserProfile()));
-                          },
-                          child: Icon(Icons.account_box_rounded, size: 35)
-                          // Text(
-                          //   "🧙🏻",
-                          //   style: TextStyle(fontSize: 25),
-                          // ),
-                          ),
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => UserProfile()));
+                        },
+                        child: Icon(Icons.account_box_rounded, size: 35),
+                        // Text(
+                        //   "🧙🏻",
+                        //   style: TextStyle(fontSize: 25),
+                        // ),
+                      ),
                       //Icon(Icons.clear_all),
                     ),
                   ],
@@ -84,7 +85,7 @@ class BlogScreen extends StatelessWidget {
   }
 }
 
-class BlogCard extends StatelessWidget {
+class BlogCard extends StatefulWidget {
   final String title;
   final String posterImage;
 
@@ -94,6 +95,11 @@ class BlogCard extends StatelessWidget {
     required this.posterImage,
   }) : super(key: key);
 
+  @override
+  _BlogCardState createState() => _BlogCardState();
+}
+
+class _BlogCardState extends State<BlogCard> {
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -120,12 +126,13 @@ class BlogCard extends StatelessWidget {
         Container(
           child: Card(
             child: Image.asset(
-              posterImage,
+              widget.posterImage,
             ),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(290, 180, 15, 25),
+          padding:
+              const EdgeInsets.only(top: 190, bottom: 60, left: 20, right: 290),
           child: CircleAvatar(
             backgroundColor: Colors.transparent.withOpacity(0.5),
             radius: 25,
@@ -134,14 +141,15 @@ class BlogCard extends StatelessWidget {
             ), //Text
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(330, 15, 25, 180),
-          child: Icon(Icons.favorite_border),
+        IconButton(
+          padding: EdgeInsets.only(top: 205, left: 320),
+          icon: Icon(Icons.favorite, color: Colors.red),
+          onPressed: () {},
         ),
         Padding(
           padding: const EdgeInsets.fromLTRB(10, 255, 0, 10),
           child: Text(
-            title,
+            widget.title,
             style: kTextStyle,
           ),
         ),

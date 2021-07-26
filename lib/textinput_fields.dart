@@ -25,8 +25,8 @@ class TextInputs extends StatelessWidget {
         controller: customController,
         obscureText: obscureText,
         keyboardType: inputType,
-        style: TextStyle(color: Colors.white, fontSize: 25),
-        cursorColor: Colors.white,
+        style: TextStyle(color: Colors.black, fontSize: 22),
+        cursorColor: Color(0xff3A9A66),
         decoration: InputDecoration(
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(color: Color(0xff3A9A66), width: 2.0),

@@ -77,7 +77,7 @@ class UserProfile extends StatelessWidget {
                         Text("Flutter Developer",
                             style: TextStyle(
                                 fontSize: 17,
-                                color: Colors.black54,
+                                color: Color(0xff3A9A66), //Colors.black54,
                                 fontWeight: FontWeight.bold)),
                       ],
                     ),
@@ -153,7 +153,7 @@ class UserSettingTile extends StatelessWidget {
                     height: 35,
                     child: icon,
                     decoration: BoxDecoration(
-                      color: Colors.lightBlue.withOpacity(0.1),
+                      color: Color(0xff3A9A66).withOpacity(0.3),
                       borderRadius: BorderRadius.all(
                         Radius.circular(10),
                       ),
